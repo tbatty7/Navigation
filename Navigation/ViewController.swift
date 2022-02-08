@@ -46,7 +46,7 @@ class ViewController: UIViewController {
     
     #if DEBUG
     func cleanup() {
-        // eliminate any persistent side effects of ViewController
+        // eliminate any persistent side effects of ViewController like running a timer or observing notifications
     }
     #endif
 }
