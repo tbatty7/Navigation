@@ -16,8 +16,8 @@ class ViewController: UIViewController {
 
     @IBAction private func pushNextViewController() {
         let nextVC = CodeNextViewController(labelText: "Pushed from code")
-        self.navigationController?
-            .pushViewController(nextVC, animated: true)
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        print(">>>>>>>> Tapped button")
     }
     
     @IBAction private func presentModalNextViewController() {

@@ -14,6 +14,7 @@ class CodeNextViewController: UIViewController {
     init(labelText: String) {
         label.text = labelText
         super.init(nibName: nil, bundle: nil)
+        print(">>>>>>> Initialized CodeViewController with \(labelText)")
     }
     
     required init?(coder: NSCoder) {
@@ -28,6 +29,7 @@ class CodeNextViewController: UIViewController {
         
         activateEqualConstraints(.centerX, fromItem: label, toItem: view)
         activateEqualConstraints(.centerY, fromItem: label, toItem: view)
+        print(">>>>>>>>> Loaded content")
     }
     
     private func activateEqualConstraints(
