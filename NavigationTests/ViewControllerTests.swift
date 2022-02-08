@@ -13,6 +13,7 @@ final class ViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
+        executeRunLoop()
         viewController = nil
         super.tearDown()
     }
@@ -78,6 +79,15 @@ final class ViewControllerTests: XCTestCase {
         // otherwise it returns nil
         // This also deinits the ViewControllers
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
+    }
+    
+    func test_tappingSeguePushButton_shouldShowSegueNextViewController() {
+        let presentationVerifier = PresentationVerifier()
+        putInWindow(viewController) // for segue to work in the test, we need to load the ViewController into a visible UIWindow
+        tap(viewController.seguePushButton)
+        
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: viewController)
+        XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
     }
     
 }
