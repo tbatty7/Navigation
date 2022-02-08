@@ -44,4 +44,8 @@ class CodeNextViewController: UIViewController {
                            multiplier: 1,
                            constant: 0).isActive = true
     }
+    
+    deinit {
+        print(">>>>>>> CodeNextViewController.deinit")
+    }
 }

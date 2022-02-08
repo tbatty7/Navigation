@@ -25,6 +25,10 @@ class ViewController: UIViewController {
         self.present(nextVC, animated: true)
     }
     
+    deinit {
+        print(">>>>>>> ViewController.deinit")
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "pushNext"?:

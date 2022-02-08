@@ -18,6 +18,8 @@
 		222F19DD27B1941700B7C3E1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */; };
 		222F19E127B196F000B7C3E1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F19E027B196F000B7C3E1 /* TestHelpers.swift */; };
 		2237705627B2B18E002AEF11 /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237705527B2B18E002AEF11 /* SpyNavigationController.swift */; };
+		2237705827B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2237705727B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework */; };
+		2237705A27B2C4E5002AEF11 /* ViewControllerPresentationSpy.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2237705727B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,19 @@
 			remoteInfo = Navigation;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2237705927B2C4A0002AEF11 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				2237705A27B2C4E5002AEF11 /* ViewControllerPresentationSpy.xcframework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		222CC6DD27AF4AD2008F7066 /* Navigation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Navigation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -45,6 +60,7 @@
 		222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		222F19E027B196F000B7C3E1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		2237705527B2B18E002AEF11 /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
+		2237705727B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = ViewControllerPresentationSpy.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2237705827B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +119,7 @@
 		222CC6F627AF4AD3008F7066 /* NavigationTests */ = {
 			isa = PBXGroup;
 			children = (
+				2237705727B2C464002AEF11 /* ViewControllerPresentationSpy.xcframework */,
 				222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */,
 				222F19E027B196F000B7C3E1 /* TestHelpers.swift */,
 				2237705527B2B18E002AEF11 /* SpyNavigationController.swift */,
@@ -136,6 +154,7 @@
 				222CC6EF27AF4AD3008F7066 /* Sources */,
 				222CC6F027AF4AD3008F7066 /* Frameworks */,
 				222CC6F127AF4AD3008F7066 /* Resources */,
+				2237705927B2C4A0002AEF11 /* CopyFiles */,
 			);
 			buildRules = (
 			);
