@@ -54,7 +54,8 @@ final class ViewControllerTests: XCTestCase {
     }
 
     func test_INCORRECT_tappingCodeModalButton_shouldPresentCodeNextViewController() {
-        // This sets the viewController as the rootViewController in a visible UIWindow.  It does not deinit either of the ViewControllers
+        // This sets the viewController as the rootViewController in a visible UIWindow.
+        // This does not deinit either of the ViewControllers
         
         UIApplication.shared.windows.first?.rootViewController = viewController
         
@@ -71,6 +72,11 @@ final class ViewControllerTests: XCTestCase {
         let presentationVerifier = PresentationVerifier()
         tap(viewController.codeModalButton)
         let codeNextVC: CodeNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: viewController)
+        // this tests that the main ViewController was the presenting one,
+        // that CodeNextViewController was navigated to and had animation set on it,
+        // and returns the instance of the correct type if it was a CodeNextViewController,
+        // otherwise it returns nil
+        // This also deinits the ViewControllers
         XCTAssertEqual(codeNextVC?.label.text, "Modal from code")
     }
     
