@@ -17,6 +17,7 @@
 		222F19DB27B16CEA00B7C3E1 /* SegueNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F19DA27B16CEA00B7C3E1 /* SegueNextViewController.swift */; };
 		222F19DD27B1941700B7C3E1 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */; };
 		222F19E127B196F000B7C3E1 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F19E027B196F000B7C3E1 /* TestHelpers.swift */; };
+		2237705627B2B18E002AEF11 /* SpyNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2237705527B2B18E002AEF11 /* SpyNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,7 @@
 		222F19DA27B16CEA00B7C3E1 /* SegueNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueNextViewController.swift; sourceTree = "<group>"; };
 		222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		222F19E027B196F000B7C3E1 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		2237705527B2B18E002AEF11 /* SpyNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpyNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 			children = (
 				222F19DC27B1941700B7C3E1 /* ViewControllerTests.swift */,
 				222F19E027B196F000B7C3E1 /* TestHelpers.swift */,
+				2237705527B2B18E002AEF11 /* SpyNavigationController.swift */,
 			);
 			path = NavigationTests;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				222F19DD27B1941700B7C3E1 /* ViewControllerTests.swift in Sources */,
+				2237705627B2B18E002AEF11 /* SpyNavigationController.swift in Sources */,
 				222F19E127B196F000B7C3E1 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
