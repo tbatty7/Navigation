@@ -9,10 +9,12 @@ import UIKit
 
 class SpyNavigationController: UINavigationController {
     private(set) var pushViewControllerArgsAnimated: [Bool] = []
+    private(set) var pushedViewControllers: [UIViewController] = []
     
     override func pushViewController(_ viewController: UIViewController,
                             animated: Bool) {
         super.pushViewController(viewController, animated: animated)
         pushViewControllerArgsAnimated.append(animated)
+        pushedViewControllers.append(viewController)
     }
 }

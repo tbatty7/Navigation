@@ -37,7 +37,10 @@ final class ViewControllerTests: XCTestCase {
             return
         }
         XCTAssertEqual(codeNextVC.label.text, "Pushed from code")
-        XCTAssertEqual(navigation.pushViewControllerArgsAnimated.last, true, "Expected animation to be passed")
+        XCTAssertEqual(navigation.pushViewControllerArgsAnimated.count, 2)
+        XCTAssertEqual(String(describing: navigation.pushedViewControllers.first!), String(describing: viewController), "Expected first ViewController to be the main ViewController, second one to be CodeNextViewController")
+        XCTAssertEqual(navigation.pushViewControllerArgsAnimated.first, false, "Expected animation to not be passed for main ViewController")
+        XCTAssertEqual(navigation.pushViewControllerArgsAnimated.last, true, "Expected animation to be passed for CodeNextViewController")
     }
 }
 
