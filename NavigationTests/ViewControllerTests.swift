@@ -13,7 +13,7 @@ final class ViewControllerTests: XCTestCase {
     }
     
     override func tearDown() {
-        executeRunLoop()
+        executeRunLoop() // This ensures the ViewController added to the UIWindow deinits
         viewController = nil
         super.tearDown()
     }
@@ -90,6 +90,14 @@ final class ViewControllerTests: XCTestCase {
         XCTAssertEqual(segueNextVC?.labelText, "Pushed from segue")
     }
     
+    func test_tappingSegueModalButton_shouldShowSegueNextViewController() {
+        let presentationVerifier = PresentationVerifier()
+        
+        tap(viewController.segueModalButton)
+        
+        let segueNextVC: SegueNextViewController? = presentationVerifier.verify(animated: true, presentingViewController: viewController)
+        XCTAssertEqual(segueNextVC?.labelText, "Modal from segue")
+    }
 }
 
 // We can't use this for a ViewController that comes from a storyboard
