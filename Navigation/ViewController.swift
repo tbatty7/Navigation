@@ -43,5 +43,11 @@ class ViewController: UIViewController {
             return
         }
     }
+    
+    #if DEBUG
+    func cleanup() {
+        // eliminate any persistent side effects of ViewController
+    }
+    #endif
 }
 

@@ -14,6 +14,7 @@ final class ViewControllerTests: XCTestCase {
     
     override func tearDown() {
         executeRunLoop() // This ensures the ViewController added to the UIWindow deinits
+        viewController.cleanup()
         viewController = nil
         super.tearDown()
     }
@@ -91,6 +92,8 @@ final class ViewControllerTests: XCTestCase {
     }
     
     func test_tappingSegueModalButton_shouldShowSegueNextViewController() {
+        // This does not deinit either of the ViewControllers, but there is not a known better option yet.
+        // You can limit the side effects by creating a back door cleanup function in the ViewControllers with #if DEBUG...#endif
         let presentationVerifier = PresentationVerifier()
         
         tap(viewController.segueModalButton)
